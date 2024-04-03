@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Información Personal</title>
+    <link rel="stylesheet" href="../Estilos/Formulario.css">
+</head>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="../Imagenes\Logo.png" alt="Logo">
+        </div>
+
+        <div class="menu">
+            <a href="inicio.html">Inicio</a>
+            <a href="SobreNosotros.html">Sobre nosotros</a>
+            <a href="Servicios.html">Servicios</a>
+            <a href="Contacto.html">Contacto</a>
+            </div>
+    </nav>
+</header>
+<body>
+        <div class="content">
+    <form action="procesar_formulario.php" method="post">
+        <h1>Formulario de Información Personal</h1>
+
+        <!-- Campo Nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <!-- Campo Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Campo Cédula -->
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" pattern="[0-9]{1,}" title="Ingrese solo números" required>
+
+        <!-- Campo Género (Sexo) -->
+        <label>Género (Sexo):</label>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="femenino" name="genero" value="femenino" required>
+
+        <!-- Campo Dirección -->
+        <label for="direccion">Dirección:</label>
+        <textarea id="direccion" name="direccion"  rows="4" required></textarea>
+
+        <!-- Campo Ocupación -->
+        <label for="ocupacion">Ocupación:</label>
+        <input type="text" id="ocupacion" name="ocupacion" required>
+
+        <!-- Botón de envío -->
+        <button type="button" onclick="enviarFormulario()">Enviar</button>
+
+        <button type="button" onclick="vaciarFormulario()">Vaciar Formulario</button>
+    </form>
+        </div>
+        <script src="../java/script.js"></script>
+</body>
+</html>
